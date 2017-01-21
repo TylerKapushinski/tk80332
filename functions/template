@@ -1,0 +1,13 @@
+
+gitconfig(){
+
+
+  P1=${1:-""}
+  P2=$P2:-""}
+
+  git config credential.helper cache
+  git push 
+
+
+}
+
