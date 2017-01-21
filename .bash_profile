@@ -4,7 +4,7 @@
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
-
+PS1="\u@\w 8==>"
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
@@ -31,16 +31,13 @@ echo "frmat loaded.  Loading functions."
 # Load functions
 
 for f in /home/ec2-user/tk80332/functions/*.sh; do
-    echo $f
     filef=${f%.sh}
     filef=${filef##*/}
-    echo $filef
-    #. $f
+    . $f
     frmat "Loading" $filef
     echo $strLine
 done
 
 echo "functions loaded."
-
 
 alias  l="ls -la"
