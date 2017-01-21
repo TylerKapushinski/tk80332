@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Settings
+
+
+# Line formatter
+frmat(a, b){
+
+  lineLen=120
+  totLen=$(echo $a$b | wc -m)
+  newLine=$a
+  while [ $totLen > lineLen ]; do
+    newLine="$newLine."
+    totLen=$(echo $newLine$b | wc -m)
+  done
+strLine=$totLen$b
+
+}
+# Drive check
+
